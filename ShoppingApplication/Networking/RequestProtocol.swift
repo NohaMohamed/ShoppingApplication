@@ -28,4 +28,8 @@ protocol RequestProtocol {
     var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }
 }
-public protocol Model: Codable {}
+extension RequestProtocol {
+    var baseURL: String {
+        return "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/"
+    }
+}
