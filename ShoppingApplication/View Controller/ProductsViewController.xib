@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="ShoppingApplication" customModuleProvider="target">
+            <connections>
+                <outlet property="productsTableview" destination="mmu-At-zGE" id="R59-Og-y0x"/>
+                <outlet property="searchBar" destination="PcA-JX-Ztb" id="6jx-qb-laG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="aTp-Qe-CJu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PcA-JX-Ztb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-At-zGE">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mmu-At-zGE" secondAttribute="bottom" id="C1h-sj-tvm"/>
+                <constraint firstItem="mmu-At-zGE" firstAttribute="top" secondItem="PcA-JX-Ztb" secondAttribute="bottom" symbolic="YES" id="HQp-e7-LSq"/>
+                <constraint firstItem="PcA-JX-Ztb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HjH-n2-i1m"/>
+                <constraint firstItem="PcA-JX-Ztb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MU9-Vr-Cva"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mmu-At-zGE" secondAttribute="trailing" id="WcM-bA-sS1"/>
+                <constraint firstItem="PcA-JX-Ztb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wev-nM-4Yg"/>
+                <constraint firstItem="mmu-At-zGE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sEO-zq-471"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="101"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
