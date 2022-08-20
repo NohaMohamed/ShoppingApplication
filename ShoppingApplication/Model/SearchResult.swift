@@ -9,10 +9,12 @@ import Foundation
 struct SearchResult : Codable {
     
     let products : [Product]?
-    
-    
+    let currentPage , pageSize , totalResults ,pageCount : Int
+
     enum CodingKeys: String, CodingKey {
         case products = "products"
+        case currentPage , totalResults , pageCount , pageSize
+        
     }
     struct Product : Codable {
         

@@ -11,22 +11,32 @@ protocol ProductsPresenterToViewProtocol {
 }
 final class ProductsPresenter {
     weak var view: ProductsViewProtocol?
-    lazy var service = ProductsService(apiClient: APICleint.shared)
+    var totalPages = 1
+    var pageToLoad = 1
+    var isLoadingNextPage = false
+    var service : ProductsServiceProtocol?
     var products: [SearchResult.Product]?
     
-    init(delegate: ProductsViewProtocol) {
-        self.view = delegate
+    init(service: ProductsServiceProtocol) {
+        self.service = service
     }
 }
 extension ProductsPresenter: ProductsPresenterToViewProtocol{
     func search(_ text: String) {
-        service.fetchSearchResult(text: text, page: 1) { [weak self] result in
+        guard !isLoadingNextPage || pageToLoad < totalPages else {
+            return
+        }
+        isLoadingNextPage = true
+        service?.fetchSearchResult(text: text, page: pageToLoad) { [weak self] result in
+            self?.isLoadingNextPage = false
             switch result{
                 case .success(let model):
                 guard let items = model.products , items.count > 0 else {
                     return
                 }
                 self?.products = items
+                self?.pageToLoad = model.currentPage + 1
+                self?.totalPages = model.pageCount
                 self?.view?.showProducts()
                 break
                 case .failure(let error):
