@@ -20,12 +20,13 @@ class ProductsViewController: UIViewController {
     private var searchTask: DispatchWorkItem?
     let cellIdentifier: String = "ProductTableViewCell"
     
-    lazy var presenter =  ProductsPresenter(delegate: self)
+    lazy var presenter =  ProductsPresenter(service: ProductsService(apiClient: APICleint.shared))
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        presenter.view = self
         setupTableView()
     }
     private func setupTableView() {
@@ -51,7 +52,15 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return searchCell
     }
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let isLastCell = indexPath.row == presenter.products?.count ?? 0 - 1
+        // Only continue when there is no previous load next page request in order
+        // to not get possible duplicate results.
+        guard isLastCell, presenter.isLoadingNextPage == false else { return }
+        if let searchBarText = searchBar.text{
+            presenter.search(searchBarText)
+        }
+    }
     
 }
 extension ProductsViewController: ProductsViewProtocol{
@@ -82,8 +91,7 @@ extension ProductsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let searchBarText = searchBar.text
         guard
-            let text = searchBarText,
-            !text.isEmpty
+            let text = searchBarText, !text.isEmpty
         else {
 //            self.modelController.resetData()
             self.searchTask?.cancel()

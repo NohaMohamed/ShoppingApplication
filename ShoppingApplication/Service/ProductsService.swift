@@ -7,18 +7,20 @@
 
 import Foundation
 protocol ProductsServiceProtocol {
+    var apiClient: APICleintProtocol { get set }
     func fetchSearchResult(text: String,page: Int,compeletion : @escaping (Result<SearchResult, CustomNetworkError>) -> Void)
 }
 struct ProductsService{
     
     // MARK: - Dependencies
     
-    var apiClient: APICleintProtocol
+    var apiClient: APICleintProtocol = APICleint.shared
 
 }
 // MARK: - Extensions
 
 extension ProductsService: ProductsServiceProtocol {
+
     
     // MARK: - Functions
     func fetchSearchResult(text: String,page: Int, compeletion: @escaping (Result<SearchResult, CustomNetworkError>) -> Void) {

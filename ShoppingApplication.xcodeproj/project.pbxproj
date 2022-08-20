@@ -29,6 +29,11 @@
 		4D07DD7128AFE072006E5542 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07DD7028AFE072006E5542 /* SearchRequest.swift */; };
 		4D07DD7328AFE721006E5542 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D07DD7228AFE721006E5542 /* ProductsViewController.xib */; };
 		4D07DD7628AFECA5006E5542 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D07DD7528AFECA5006E5542 /* Kingfisher */; };
+		4D31AF4828B0775C00DC9EC0 /* ProductsServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4728B0775C00DC9EC0 /* ProductsServiceSpy.swift */; };
+		4D31AF4A28B088A400DC9EC0 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D31AF4928B088A400DC9EC0 /* response.json */; };
+		4D31AF4B28B08CD400DC9EC0 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07DD5C28AEBF98006E5542 /* SearchResult.swift */; };
+		4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */; };
+		4D39C00328B018F30023B14E /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D39C00228B018F30023B14E /* MockSearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,10 @@
 		4D07DD6E28AF1D2C006E5542 /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
 		4D07DD7028AFE072006E5542 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		4D07DD7228AFE721006E5542 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		4D31AF4728B0775C00DC9EC0 /* ProductsServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceSpy.swift; sourceTree = "<group>"; };
+		4D31AF4928B088A400DC9EC0 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
+		4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseMock.swift; sourceTree = "<group>"; };
+		4D39C00228B018F30023B14E /* MockSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +153,11 @@
 		4D07DD3228AEB20A006E5542 /* ShoppingApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
+				4D31AF4928B088A400DC9EC0 /* response.json */,
+				4D39C00228B018F30023B14E /* MockSearchService.swift */,
 				4D07DD3328AEB20A006E5542 /* ShoppingApplicationTests.swift */,
+				4D31AF4728B0775C00DC9EC0 /* ProductsServiceSpy.swift */,
+				4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */,
 			);
 			path = ShoppingApplicationTests;
 			sourceTree = "<group>";
@@ -342,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D31AF4A28B088A400DC9EC0 /* response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D07DD3428AEB20A006E5542 /* ShoppingApplicationTests.swift in Sources */,
+				4D39C00328B018F30023B14E /* MockSearchService.swift in Sources */,
+				4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */,
+				4D31AF4828B0775C00DC9EC0 /* ProductsServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D07DD3E28AEB20A006E5542 /* ShoppingApplicationUITests.swift in Sources */,
+				4D31AF4B28B08CD400DC9EC0 /* SearchResult.swift in Sources */,
 				4D07DD4028AEB20A006E5542 /* ShoppingApplicationUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
