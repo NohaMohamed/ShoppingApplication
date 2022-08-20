@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "productId": "733902",
+            "productName": "Apple iPhone 7 32GB Rose Gold",
+            "reviewInformation": {
+                "reviews": [],
+                "reviewSummary": {
+                    "reviewAverage": 9.3,
+                    "reviewCount": 1235
+                }
+            },
+            "USPs": [
+                "32 GB opslagcapaciteit",
+                "4,7 inch Retina HD scherm",
+                "iOS 11"
+            ],
+            "availabilityState": 2,
+            "salesPriceIncVat": 629,
+            "productImage": "https://image.coolblue.nl/300x750/products/985071",
+            "nextDayDelivery": true
+        }
+    ],
+    "currentPage": 3,
+    "pageSize": 22,
+    "totalResults": 70,
+    "pageCount": 3
+}

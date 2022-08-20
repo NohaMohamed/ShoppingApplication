@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Networking
 protocol ProductsViewProtocol : AnyObject {
     func showProducts()
 }

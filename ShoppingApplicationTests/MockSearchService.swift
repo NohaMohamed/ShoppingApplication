@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 @testable import ShoppingApplication
 protocol MockAPIClientProtocol : APICleintProtocol {
     var data: Data? {get set}
@@ -23,8 +24,13 @@ class MockAPIClient: MockAPIClientProtocol {
     }
     
     func send<ResponsType>(request: RequestProtocol, compeletion: @escaping (Result<ResponsType, CustomNetworkError>) -> Void) where ResponsType: Codable {
-        if let data = data , let decodedData = try? JSONDecoder().decode(ResponsType.self, from: data) {
-            compeletion(.success(decodedData))
+        if let data = data  {
+            do{
+                let decodedData = try JSONDecoder().decode(ResponsType.self, from: data)
+                compeletion(.success(decodedData))
+            }catch {
+                compeletion(.failure(.canNotDecodeObject))
+            }
         }else if let error = error {
             compeletion(.failure(error))
         }else{

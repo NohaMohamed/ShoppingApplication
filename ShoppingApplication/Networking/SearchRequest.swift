@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Networking
 //https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/search?query=apple&page=1
 enum SearchRequest: RequestProtocol {
     
@@ -40,5 +41,10 @@ enum SearchRequest: RequestProtocol {
     enum Keys: String {
         case query
         case page
+    }
+}
+extension RequestProtocol {
+    var baseURL: String {
+        return "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/"
     }
 }

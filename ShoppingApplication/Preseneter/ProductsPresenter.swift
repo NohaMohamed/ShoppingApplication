@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Networking
 protocol ProductsPresenterToViewProtocol {
     func search(_ text: String)
 }
@@ -16,6 +17,7 @@ final class ProductsPresenter {
     var isLoadingNextPage = false
     var service : ProductsServiceProtocol?
     var products: [SearchResult.Product]?
+    var error: CustomNetworkError?
     
     init(service: ProductsServiceProtocol) {
         self.service = service
@@ -40,6 +42,7 @@ extension ProductsPresenter: ProductsPresenterToViewProtocol{
                 self?.view?.showProducts()
                 break
                 case .failure(let error):
+                self?.error = error
                 break
             }
         }
