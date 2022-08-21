@@ -9,6 +9,7 @@
 import Foundation
 import Networking
 @testable import ShoppingApplication
+
 protocol MockAPIClientProtocol : APICleintProtocol {
     var data: Data? {get set}
     var error: CustomNetworkError? {get set}

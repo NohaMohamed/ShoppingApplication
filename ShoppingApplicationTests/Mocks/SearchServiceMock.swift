@@ -1,6 +1,6 @@
 //
 //  ProductsPresenterSPY.swift
-//  ShoppingApplicationTests
+//  SearchServiceMock
 //
 //  Created by Noha Mohamed on 20/08/2022.
 //
@@ -9,9 +9,10 @@ import Foundation
 import Networking
 @testable import ShoppingApplication
 
-class ProductsServiceSpy: ProductsServiceProtocol {
+class SearchServiceMock: SearchServiceProtocol {
     var apiClient: APICleintProtocol = MockAPIClient()
     private lazy var mockAPI = apiClient as? MockAPIClient
+    
     func configure(data: Data?, error: CustomNetworkError?){
         mockAPI?.configure(data: data, error: error)
     }
