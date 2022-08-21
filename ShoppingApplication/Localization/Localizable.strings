@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  FreeNow
+
+  Created by Noha Mohamed on 20/08/2022.
+  
+*/
+
+"error_message_generic" = "Oops, something went wrong!";
+"error_message_can_not_send_request" = "Can not send request";
+"error_message_can_not_read_data" = "Can not read data";
+"done" = "Done";
