@@ -7,33 +7,24 @@
 
 import Foundation
 @testable import ShoppingApplication
-protocol SearchPresenterMockProtocol: SearchPresenterToViewProtocol{
-    var isSearchCalled: Bool {set get}
-}
-class SearchPresenterMock: SearchPresenterMockProtocol{
-    
+class SearchPresenterMock: SearchPresenterToViewProtocol{
+  
     var loadingNextPage: Bool = false
     var isloading: Bool = false
     var isSearchCalled = false
+    var pageCount = 0
     
     func loadNextPage(text: String) {
+        loadingNextPage = true
         search(text)
     }
     
-    func showLoading() {
-        isloading = true
-    }
-    
-    func hideLoading() {
-        isloading = false
-    }
-    
-    func resetProducts() {
-    }
     func getProducts() -> [SearchResultUIModel] {
         return [SearchResponseMock.getUIProduct()]
     }
-    
+    func resetProducts() {
+        pageCount = 1
+    }
     func search(_ text: String) {
         isSearchCalled = true
         return

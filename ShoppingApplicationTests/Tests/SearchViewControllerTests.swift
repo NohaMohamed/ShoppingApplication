@@ -60,4 +60,33 @@ class SearchViewControllerTests: XCTestCase {
             XCTAssertTrue(presenter.isSearchCalled)
         }
     }
+    func test_isLoadingNextPage(){
+        // Given
+        sut?.loadViewIfNeeded()
+        // When
+        guard let sut = sut , let presenter =  presenter  else {
+            return
+        }
+        let cell = sut.tableView(sut.productsTableview, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
+        guard let cell = cell else {
+                return
+        }
+        sut.tableView(sut.productsTableview, willDisplay: cell, forRowAt: IndexPath(row: 0, section: 0))
+
+        // Then
+        XCTAssertTrue(presenter.loadingNextPage)
+        XCTAssertTrue(presenter.isSearchCalled)
+    }
+    
+    func test_new_Search() {
+        // Given
+        sut?.loadViewIfNeeded()
+        // When
+        sut?.searchController.searchBar.text = "apple"
+        // Then
+        guard let presenter =  presenter else {
+            return
+        }
+        XCTAssertEqual(presenter.pageCount, 1)
+    }
 }

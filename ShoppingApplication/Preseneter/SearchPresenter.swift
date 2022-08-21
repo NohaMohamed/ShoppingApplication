@@ -7,24 +7,26 @@
 
 import Foundation
 
-protocol SearchPresenterProtocol {
+protocol SearchPresenterToViewProtocol {
     var loadingNextPage: Bool {get set}
     func search(_ text: String)
     func loadNextPage(text: String)
     func getProducts() -> [SearchResultUIModel]
-}
-protocol SearchPresenterToViewProtocol: SearchPresenterProtocol {
     func resetProducts()
-    func showLoading()
-    func hideLoading()
 }
 final class SearchPresenter {
+    
+    //MARK: Dependencies
+    
     weak var view: SearchViewProtocol?
+    var service : SearchServiceProtocol?
+    
+    //MARK: Properties
+    
     var totalPages = 1
     var pageToLoad = 1
     var loadingNextPage: Bool = false
-    var service : SearchServiceProtocol?
-    var products = [SearchResultUIModel]()
+    private var products = [SearchResultUIModel]()
     var errorMessage: String?
     
     init(service: SearchServiceProtocol) {
@@ -71,7 +73,7 @@ extension SearchPresenter: SearchPresenterToViewProtocol{
         DispatchQueue.main.async { [weak self] in
             self?.view?.showLoading()
         }
-       
+        
     }
     func hideLoading() {
         DispatchQueue.main.async { [weak self] in

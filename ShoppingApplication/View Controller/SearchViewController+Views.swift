@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension SearchViewController{
-     func setSearchBarView() {
+    func setSearchBarView() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
@@ -32,7 +32,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         guard
             let searchCell = cell as? ProductTableViewCell
         else { return cell }
-            searchCell.setProduct(presenter.getProducts()[indexPath.row])
+        searchCell.setProduct(presenter.getProducts()[indexPath.row])
         return searchCell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

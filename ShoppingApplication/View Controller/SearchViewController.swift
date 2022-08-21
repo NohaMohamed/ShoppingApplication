@@ -10,7 +10,7 @@ protocol SearchViewProtocol : AnyObject ,LoadingViewCapable{
     func didRecieveProducts()
     func didRecieveError(_ message: String)
 }
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
     
     //MARK: Outelts
     @IBOutlet weak var productsTableview: UITableView!
@@ -56,7 +56,7 @@ extension SearchViewController: SearchViewProtocol{
 // Search Logic
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-            let searchBarText = searchController.searchBar.text
+        let searchBarText = searchController.searchBar.text
         guard let text = searchBarText, !text.isEmpty else {
             self.presenter.resetProducts()
             self.searchTask?.cancel()
@@ -76,4 +76,5 @@ extension SearchViewController: UISearchResultsUpdating {
         
         DispatchQueue.global().asyncAfter(deadline: dispatchTime, execute: task)
     }
+    
 }
