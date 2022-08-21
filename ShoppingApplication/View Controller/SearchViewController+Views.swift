@@ -17,7 +17,7 @@ extension SearchViewController{
     }
     func showError(message: String){
         let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Localization.string(for: .done), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     

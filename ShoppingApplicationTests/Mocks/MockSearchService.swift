@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Networking
+import NetworkingLayer
 @testable import ShoppingApplication
 
 protocol MockAPIClientProtocol : APICleintProtocol {

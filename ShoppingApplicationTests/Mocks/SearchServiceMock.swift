@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Networking
+import NetworkingLayer
 @testable import ShoppingApplication
 
 class SearchServiceMock: SearchServiceProtocol {

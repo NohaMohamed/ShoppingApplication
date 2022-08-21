@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Networking
+import NetworkingLayer
 @testable import ShoppingApplication
 
 class SearchPresenterTests: XCTestCase {

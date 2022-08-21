@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import Networking
+import NetworkingLayer
+
 protocol SearchServiceProtocol {
     var apiClient: APICleintProtocol { get set }
     func fetchSearchResult(text: String,page: Int,compeletion : @escaping (Result<SearchResult, CustomNetworkError>) -> Void)
