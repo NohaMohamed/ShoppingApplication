@@ -25,14 +25,14 @@
 		4D07DD7328AFE721006E5542 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D07DD7228AFE721006E5542 /* SearchViewController.xib */; };
 		4D07DD7628AFECA5006E5542 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D07DD7528AFECA5006E5542 /* Kingfisher */; };
 		4D0A1B6228B164C00011BCDB /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6128B164C00011BCDB /* SearchViewControllerTests.swift */; };
-		4D0A1B6428B164FE0011BCDB /* SearchPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6328B164FE0011BCDB /* SearchPresenterSpy.swift */; };
+		4D0A1B6428B164FE0011BCDB /* SearchPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */; };
 		4D0A1B6728B172140011BCDB /* SearchResultUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6628B172140011BCDB /* SearchResultUIModel.swift */; };
 		4D0A1B6928B192310011BCDB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6828B192310011BCDB /* LoadingView.swift */; };
 		4D0B7E2728B25CB000DA54C2 /* SearchViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B7E2628B25CB000DA54C2 /* SearchViewController+Views.swift */; };
 		4D0B7E2B28B2874C00DA54C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B7E2A28B2874C00DA54C2 /* Localizable.strings */; };
 		4D125B2928B0C6C100102378 /* wrong_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D125B2828B0C6C100102378 /* wrong_response.json */; };
 		4D125B3528B0CE1900102378 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 4D125B3428B0CE1900102378 /* Networking */; };
-		4D31AF4828B0775C00DC9EC0 /* SearchServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4728B0775C00DC9EC0 /* SearchServiceSpy.swift */; };
+		4D31AF4828B0775C00DC9EC0 /* SearchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4728B0775C00DC9EC0 /* SearchServiceMock.swift */; };
 		4D31AF4A28B088A400DC9EC0 /* success_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D31AF4928B088A400DC9EC0 /* success_response.json */; };
 		4D31AF4B28B08CD400DC9EC0 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07DD5C28AEBF98006E5542 /* SearchResult.swift */; };
 		4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */; };
@@ -78,13 +78,13 @@
 		4D07DD7028AFE072006E5542 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		4D07DD7228AFE721006E5542 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		4D0A1B6128B164C00011BCDB /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
-		4D0A1B6328B164FE0011BCDB /* SearchPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterSpy.swift; sourceTree = "<group>"; };
+		4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterMock.swift; sourceTree = "<group>"; };
 		4D0A1B6628B172140011BCDB /* SearchResultUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUIModel.swift; sourceTree = "<group>"; };
 		4D0A1B6828B192310011BCDB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4D0B7E2628B25CB000DA54C2 /* SearchViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Views.swift"; sourceTree = "<group>"; };
 		4D0B7E2A28B2874C00DA54C2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4D125B2828B0C6C100102378 /* wrong_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong_response.json; sourceTree = "<group>"; };
-		4D31AF4728B0775C00DC9EC0 /* SearchServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceSpy.swift; sourceTree = "<group>"; };
+		4D31AF4728B0775C00DC9EC0 /* SearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceMock.swift; sourceTree = "<group>"; };
 		4D31AF4928B088A400DC9EC0 /* success_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_response.json; sourceTree = "<group>"; };
 		4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseMock.swift; sourceTree = "<group>"; };
 		4D39C00228B018F30023B14E /* MockSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		4D07DD3228AEB20A006E5542 /* ShoppingApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D0B7E2528B253D000DA54C2 /* Spy */,
+				4D0B7E2528B253D000DA54C2 /* Mocks */,
 				4D0A1B6528B165BC0011BCDB /* Tests */,
 				4D125B2828B0C6C100102378 /* wrong_response.json */,
 				4D31AF4928B088A400DC9EC0 /* success_response.json */,
@@ -204,15 +204,15 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		4D0B7E2528B253D000DA54C2 /* Spy */ = {
+		4D0B7E2528B253D000DA54C2 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				4D39C00228B018F30023B14E /* MockSearchService.swift */,
-				4D31AF4728B0775C00DC9EC0 /* SearchServiceSpy.swift */,
-				4D0A1B6328B164FE0011BCDB /* SearchPresenterSpy.swift */,
+				4D31AF4728B0775C00DC9EC0 /* SearchServiceMock.swift */,
+				4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */,
 				4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */,
 			);
-			path = Spy;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		4D39BFFD28B00A850023B14E /* View Controller */ = {
@@ -423,9 +423,9 @@
 				4D07DD3428AEB20A006E5542 /* SearchPresenterTests.swift in Sources */,
 				4D0A1B6228B164C00011BCDB /* SearchViewControllerTests.swift in Sources */,
 				4D39C00328B018F30023B14E /* MockSearchService.swift in Sources */,
-				4D0A1B6428B164FE0011BCDB /* SearchPresenterSpy.swift in Sources */,
+				4D0A1B6428B164FE0011BCDB /* SearchPresenterMock.swift in Sources */,
 				4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */,
-				4D31AF4828B0775C00DC9EC0 /* SearchServiceSpy.swift in Sources */,
+				4D31AF4828B0775C00DC9EC0 /* SearchServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
