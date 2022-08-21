@@ -6,11 +6,14 @@
 //
 
 import Foundation
-protocol SearchPresenterToViewProtocol {
+
+protocol SearchPresenterProtocol {
     var loadingNextPage: Bool {get set}
     func search(_ text: String)
     func loadNextPage(text: String)
     func getProducts() -> [SearchResultUIModel]
+}
+protocol SearchPresenterToViewProtocol: SearchPresenterProtocol {
     func resetProducts()
     func showLoading()
     func hideLoading()
