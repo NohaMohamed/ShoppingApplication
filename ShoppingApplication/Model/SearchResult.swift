@@ -27,7 +27,7 @@ struct SearchResult : Codable {
         let productName : String?
         let promoIcon : PromoIcon?
         let reviewInformation : ReviewInformation?
-        let salesPriceIncVat : Float?
+        let salesPriceIncVat : Float
         
         
         enum CodingKeys: String, CodingKey {

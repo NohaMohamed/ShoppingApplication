@@ -16,16 +16,13 @@ class ProductTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
     }
     
-    func setProduct(_ product: SearchResult.Product){
-        
-        if let url = product.productImage, let imageUrl = URL(string: url){
+    func setProduct(_ product: SearchResultUIModel){
+        if let url = product.productImageUrl, let imageUrl = URL(string: url){
             productImage.kf.setImage(with: imageUrl, placeholder: UIImage(named: ""), options: nil, progressBlock: nil, completionHandler: nil)
         }
-        priceLabel.text = String(describing: product.salesPriceIncVat)
+        priceLabel.text = String(describing: product.salesPrice)
         titleLabel.text = product.productName
     }
 }
