@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 
-extension SearchViewController{
+extension SearchTableViewController{
     func setSearchBarView() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Type your search here"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
     }
@@ -22,12 +23,12 @@ extension SearchViewController{
     }
     
 }
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension SearchTableViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getProducts().count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         guard
             let searchCell = cell as? ProductTableViewCell
@@ -35,7 +36,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         searchCell.setProduct(presenter.getProducts()[indexPath.row])
         return searchCell
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let isLastCell = indexPath.row == presenter.getProducts().count  - 1
         // Only continue when there is no previous load next page request in order
         guard isLastCell, presenter.loadingNextPage == false else { return }

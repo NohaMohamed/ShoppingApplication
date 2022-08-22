@@ -10,11 +10,7 @@ protocol SearchViewProtocol : AnyObject ,LoadingViewCapable{
     func didRecieveProducts()
     func didRecieveError(_ message: String)
 }
-final class SearchViewController: UIViewController {
-    
-    //MARK: Outelts
-    @IBOutlet weak var productsTableview: UITableView!
-    
+final class SearchTableViewController: UITableViewController {
     //MARK: Dependencies
     private var searchTask: DispatchWorkItem?
     let cellIdentifier: String = "ProductTableViewCell"
@@ -36,25 +32,25 @@ final class SearchViewController: UIViewController {
     }
     private func setupTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
-        productsTableview.register(cellNib, forCellReuseIdentifier: cellIdentifier)
-        productsTableview.delegate = self
-        productsTableview.dataSource = self
+        tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
-extension SearchViewController: SearchViewProtocol{
+extension SearchTableViewController: SearchViewProtocol{
     func didRecieveError(_ message: String) {
         showError(message: message)
     }
     
     func didRecieveProducts() {
         DispatchQueue.main.async {
-            self.productsTableview.reloadData()
+            self.tableView.reloadData()
         }
     }
 }
 // Search Logic
-extension SearchViewController: UISearchResultsUpdating {
+extension SearchTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBarText = searchController.searchBar.text
         guard let text = searchBarText, !text.isEmpty else {

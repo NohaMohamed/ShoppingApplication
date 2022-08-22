@@ -10,8 +10,8 @@ import XCTest
 
 class SearchViewControllerTests: XCTestCase {
     lazy var presenter: SearchPresenterMock? = SearchPresenterMock()
-    lazy var sut : SearchViewController? = {
-        let vc = SearchViewController()
+    lazy var sut : SearchTableViewController? = {
+        let vc = SearchTableViewController()
         if let presenter = presenter {
             vc.presenter = presenter
         }
@@ -30,7 +30,7 @@ class SearchViewControllerTests: XCTestCase {
         guard let sut = sut else {
             return
         }
-        let rows = sut.tableView(sut.productsTableview , numberOfRowsInSection: 1)
+        let rows = sut.tableView(sut.tableView , numberOfRowsInSection: 1)
         // Then
         XCTAssertEqual(rows, 1)
     }
@@ -42,7 +42,7 @@ class SearchViewControllerTests: XCTestCase {
         guard let sut = sut else {
             return
         }
-        let cell = sut.tableView(sut.productsTableview, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
+        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
         // Then
         XCTAssertEqual(cell?.titleLabel.text, "iphone")
         XCTAssertNotNil(cell?.priceLabel.text?.contains("25.0"))
@@ -67,11 +67,11 @@ class SearchViewControllerTests: XCTestCase {
         guard let sut = sut , let presenter =  presenter  else {
             return
         }
-        let cell = sut.tableView(sut.productsTableview, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
+        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
         guard let cell = cell else {
                 return
         }
-        sut.tableView(sut.productsTableview, willDisplay: cell, forRowAt: IndexPath(row: 0, section: 0))
+        sut.tableView(sut.tableView, willDisplay: cell, forRowAt: IndexPath(row: 0, section: 0))
 
         // Then
         XCTAssertTrue(presenter.loadingNextPage)
