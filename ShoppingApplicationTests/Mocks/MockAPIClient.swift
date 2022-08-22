@@ -1,9 +1,8 @@
 //
-//  MockSearchService.swift
-//  TrackFinderTests
+//  MockAPIClient.swift
+//  ShoppingApplicationTests
 //
-//  Created by Niels Hoogendoorn on 23/06/2020.
-//  Copyright © 2020 Nihoo. All rights reserved.
+//  Created by Noha Mohamed on 21/08/2022.
 //
 
 import Foundation

@@ -1,5 +1,5 @@
 //
-//  ProductsService.swift
+//  SearchService.swift
 //  ShoppingApplication
 //
 //  Created by Noha Mohamed on 19/08/2022.

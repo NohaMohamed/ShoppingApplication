@@ -22,8 +22,8 @@ class SearchResponseMock {
     static func getProduct() -> SearchResult.Product{
         return  SearchResult.Product(uSPs: nil, availabilityState: nil, coolbluesChoiceInformationTitle: nil, nextDayDelivery: nil, productId: 123, productImage: nil, productName: "iphone", promoIcon: nil, reviewInformation: nil, salesPriceIncVat: 25.0)
     }
-    static func getUIProduct() -> SearchResultUIModel{
-        return  SearchResultUIModel(productName: "iphone", salesPrice: "Price: 25.0", productImageUrl: nil)
+    static func getUIProduct() -> ProductUIModel{
+        return  ProductUIModel(productName: "iphone", productPrice: "Price: 25.0", productImage: nil)
     }
 }
 

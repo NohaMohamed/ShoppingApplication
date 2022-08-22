@@ -19,7 +19,7 @@ class SearchPresenterMock: SearchPresenterToViewProtocol{
         search(text)
     }
     
-    func getProducts() -> [SearchResultUIModel] {
+    func getProducts() -> [ProductUIModel] {
         return [SearchResponseMock.getUIProduct()]
     }
     func resetProducts() {

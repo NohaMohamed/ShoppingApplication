@@ -18,11 +18,11 @@ class ProductTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setProduct(_ product: SearchResultUIModel){
-        if let url = product.productImageUrl, let imageUrl = URL(string: url){
+    func setProduct(_ product: ProductUIModel){
+        if let url = product.productImage, let imageUrl = URL(string: url){
             productImage.kf.setImage(with: imageUrl, placeholder: UIImage(named: ""), options: nil, progressBlock: nil, completionHandler: nil)
         }
-        priceLabel.text = String(describing: product.salesPrice)
+        priceLabel.text = String(describing: product.productPrice)
         titleLabel.text = product.productName
     }
 }

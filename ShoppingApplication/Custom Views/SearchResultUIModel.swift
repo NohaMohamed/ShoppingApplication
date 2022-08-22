@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct SearchResultUIModel : Equatable{
+struct ProductUIModel : Equatable{
     let productName: String
-    let salesPrice: String
-    let productImageUrl: String?
+    let productPrice: String
+    let productImage: String?
 }

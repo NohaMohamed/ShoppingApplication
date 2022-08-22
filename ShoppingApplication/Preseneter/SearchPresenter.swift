@@ -1,5 +1,5 @@
 //
-//  ProductsPresenter.swift
+//  SearchPresenter.swift
 //  ShoppingApplication
 //
 //  Created by Noha Mohamed on 19/08/2022.
@@ -11,7 +11,7 @@ protocol SearchPresenterToViewProtocol {
     var loadingNextPage: Bool {get set}
     func search(_ text: String)
     func loadNextPage(text: String)
-    func getProducts() -> [SearchResultUIModel]
+    func getProducts() -> [ProductUIModel]
     func resetProducts()
 }
 final class SearchPresenter {
@@ -26,14 +26,14 @@ final class SearchPresenter {
     var totalPages = 1
     var pageToLoad = 1
     var loadingNextPage: Bool = false
-    private var products = [SearchResultUIModel]()
+    private var products = [ProductUIModel]()
     var errorMessage: String?
     
     init(service: SearchServiceProtocol) {
         self.service = service
     }
-    func mapUIModel(product: SearchResult.Product) -> SearchResultUIModel{
-        return SearchResultUIModel(productName: product.productName ?? "", salesPrice: "Price : \(product.salesPriceIncVat)", productImageUrl: product.productImage)
+    func mapUIModel(product: SearchResult.Product) -> ProductUIModel{
+        return ProductUIModel(productName: product.productName ?? "", productPrice: "Price : \(product.salesPriceIncVat)", productImage: product.productImage)
     }
 }
 extension SearchPresenter: SearchPresenterToViewProtocol{
@@ -66,7 +66,7 @@ extension SearchPresenter: SearchPresenterToViewProtocol{
         loadingNextPage = true
         search(text)
     }
-    func getProducts() -> [SearchResultUIModel] {
+    func getProducts() -> [ProductUIModel] {
         return products
     }
     func showLoading() {

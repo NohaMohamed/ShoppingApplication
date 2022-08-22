@@ -34,7 +34,7 @@
 		4D31AF4A28B088A400DC9EC0 /* success_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D31AF4928B088A400DC9EC0 /* success_response.json */; };
 		4D31AF4B28B08CD400DC9EC0 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07DD5C28AEBF98006E5542 /* SearchResult.swift */; };
 		4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */; };
-		4D39C00328B018F30023B14E /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D39C00228B018F30023B14E /* MockSearchService.swift */; };
+		4D9498D428B33571009D2EF1 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9498D328B33571009D2EF1 /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 		4D31AF4728B0775C00DC9EC0 /* SearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceMock.swift; sourceTree = "<group>"; };
 		4D31AF4928B088A400DC9EC0 /* success_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_response.json; sourceTree = "<group>"; };
 		4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseMock.swift; sourceTree = "<group>"; };
-		4D39C00228B018F30023B14E /* MockSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		4D9498D328B33571009D2EF1 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,17 +136,13 @@
 		4D07DD1B28AEB209006E5542 /* ShoppingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				4D9498D528B33666009D2EF1 /* Application */,
 				4D07DD6228AF03D4006E5542 /* Networking */,
 				4D39BFFD28B00A850023B14E /* View Controller */,
 				4D39BFFE28B00A8F0023B14E /* Preseneter */,
 				4D39BFFF28B00AA70023B14E /* Service */,
 				4D07DD6728AF19AC006E5542 /* Custom Views */,
 				4D39C00028B00AF40023B14E /* Model */,
-				4D07DD1C28AEB209006E5542 /* AppDelegate.swift */,
-				4D07DD1E28AEB209006E5542 /* SceneDelegate.swift */,
-				4D07DD2528AEB20A006E5542 /* Assets.xcassets */,
-				4D07DD2728AEB20A006E5542 /* LaunchScreen.storyboard */,
-				4D07DD2A28AEB20A006E5542 /* Info.plist */,
 			);
 			path = ShoppingApplication;
 			sourceTree = "<group>";
@@ -184,8 +180,8 @@
 			children = (
 				4D0A1B6828B192310011BCDB /* LoadingView.swift */,
 				4D07DD6828AF19D1006E5542 /* ProductTableViewCell.swift */,
-				4D07DD6A28AF19E5006E5542 /* ProductTableViewCell.xib */,
 				4D0A1B6628B172140011BCDB /* SearchResultUIModel.swift */,
+				4D07DD6A28AF19E5006E5542 /* ProductTableViewCell.xib */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -202,10 +198,10 @@
 		4D0B7E2528B253D000DA54C2 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				4D39C00228B018F30023B14E /* MockSearchService.swift */,
 				4D31AF4728B0775C00DC9EC0 /* SearchServiceMock.swift */,
 				4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */,
 				4D31AF4D28B08FDA00DC9EC0 /* SearchResponseMock.swift */,
+				4D9498D328B33571009D2EF1 /* MockAPIClient.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -242,6 +238,18 @@
 				4D07DD5C28AEBF98006E5542 /* SearchResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4D9498D528B33666009D2EF1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4D07DD1E28AEB209006E5542 /* SceneDelegate.swift */,
+				4D07DD1C28AEB209006E5542 /* AppDelegate.swift */,
+				4D07DD2728AEB20A006E5542 /* LaunchScreen.storyboard */,
+				4D07DD2528AEB20A006E5542 /* Assets.xcassets */,
+				4D07DD2A28AEB20A006E5542 /* Info.plist */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,10 +414,10 @@
 			files = (
 				4D07DD3428AEB20A006E5542 /* SearchPresenterTests.swift in Sources */,
 				4D0A1B6228B164C00011BCDB /* SearchViewControllerTests.swift in Sources */,
-				4D39C00328B018F30023B14E /* MockSearchService.swift in Sources */,
 				4D0A1B6428B164FE0011BCDB /* SearchPresenterMock.swift in Sources */,
 				4D31AF4E28B08FDA00DC9EC0 /* SearchResponseMock.swift in Sources */,
 				4D31AF4828B0775C00DC9EC0 /* SearchServiceMock.swift in Sources */,
+				4D9498D428B33571009D2EF1 /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShoppingApplication/Info.plist;
+				INFOPLIST_FILE = ShoppingApplication/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -599,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShoppingApplication/Info.plist;
+				INFOPLIST_FILE = ShoppingApplication/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;

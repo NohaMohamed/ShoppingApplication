@@ -75,6 +75,6 @@ class SearchPresenterTests: XCTestCase {
         let uiModel = sut?.mapUIModel(product: apiModel)
         // Then
         XCTAssertEqual(uiModel?.productName, apiModel.productName)
-        XCTAssertNotNil(uiModel?.salesPrice.contains("\(apiModel.salesPriceIncVat)"))
+        XCTAssertNotNil(uiModel?.productPrice.contains("\(apiModel.salesPriceIncVat)"))
         }
     }

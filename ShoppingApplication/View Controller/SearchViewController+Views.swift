@@ -1,5 +1,5 @@
 //
-//  SearchViewController+.swift
+//  SearchViewController+Views.swift
 //  ShoppingApplication
 //
 //  Created by Noha Mohamed on 21/08/2022.
@@ -28,7 +28,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         guard
             let searchCell = cell as? ProductTableViewCell
         else { return cell }
@@ -38,7 +38,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let isLastCell = indexPath.row == presenter.getProducts().count  - 1
         // Only continue when there is no previous load next page request in order
-        // to not get possible duplicate results.
         guard isLastCell, presenter.loadingNextPage == false else { return }
         if let searchBarText = searchController.searchBar.text {
             presenter.loadNextPage(text: searchBarText)
