@@ -40,12 +40,14 @@ final class SearchTableViewController: UITableViewController {
 
 extension SearchTableViewController: SearchViewProtocol{
     func didRecieveError(_ message: String) {
-        showError(message: message)
+        DispatchQueue.main.async { [weak self] in
+            self?.showError(message: message)
+        }
     }
     
     func didRecieveProducts() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 }

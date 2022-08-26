@@ -23,6 +23,7 @@
 		4D07DD7128AFE072006E5542 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07DD7028AFE072006E5542 /* SearchRequest.swift */; };
 		4D07DD7328AFE721006E5542 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D07DD7228AFE721006E5542 /* SearchViewController.xib */; };
 		4D07DD7628AFECA5006E5542 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D07DD7528AFECA5006E5542 /* Kingfisher */; };
+		4D082BA328B8DD55000801AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D082BA528B8DD55000801AE /* Localizable.strings */; };
 		4D0A1B6228B164C00011BCDB /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6128B164C00011BCDB /* SearchViewControllerTests.swift */; };
 		4D0A1B6428B164FE0011BCDB /* SearchPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */; };
 		4D0A1B6728B172140011BCDB /* ProductUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1B6628B172140011BCDB /* ProductUIModel.swift */; };
@@ -74,6 +75,7 @@
 		4D07DD6E28AF1D2C006E5542 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		4D07DD7028AFE072006E5542 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		4D07DD7228AFE721006E5542 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		4D082BA428B8DD55000801AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D0A1B6128B164C00011BCDB /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		4D0A1B6328B164FE0011BCDB /* SearchPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterMock.swift; sourceTree = "<group>"; };
 		4D0A1B6628B172140011BCDB /* ProductUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUIModel.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				4D07DD2728AEB20A006E5542 /* LaunchScreen.storyboard */,
 				4D07DD2528AEB20A006E5542 /* Assets.xcassets */,
 				4D07DD2A28AEB20A006E5542 /* Info.plist */,
+				4D082BA528B8DD55000801AE /* Localizable.strings */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D082BA328B8DD55000801AE /* Localizable.strings in Resources */,
 				4D07DD2928AEB20A006E5542 /* LaunchScreen.storyboard in Resources */,
 				4D07DD6B28AF19E5006E5542 /* ProductTableViewCell.xib in Resources */,
 				4D07DD7328AFE721006E5542 /* SearchViewController.xib in Resources */,
@@ -453,6 +457,14 @@
 				4D07DD2828AEB20A006E5542 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4D082BA528B8DD55000801AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D082BA428B8DD55000801AE /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -579,6 +591,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 64T3364478;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShoppingApplication/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -606,6 +619,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 64T3364478;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShoppingApplication/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

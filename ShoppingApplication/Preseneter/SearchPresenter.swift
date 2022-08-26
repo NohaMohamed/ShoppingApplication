@@ -73,7 +73,6 @@ extension SearchPresenter: SearchPresenterToViewProtocol{
         DispatchQueue.main.async { [weak self] in
             self?.view?.showLoading()
         }
-        
     }
     func hideLoading() {
         DispatchQueue.main.async { [weak self] in

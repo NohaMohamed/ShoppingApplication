@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ShoppingApplication
+
+  Created by Noha Mohamed on 26/08/2022.
+  
+*/
+"error_message_generic" = "Error has been occured";
+"error_message_can_not_send_request" = "can't send request";
+"error_message_can_not_read_data" = "can't read data";
